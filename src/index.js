@@ -1,5 +1,6 @@
-import express from "express";
-import { PORT } from "./config/serverConfig.js";
+const express = require("express");
+const { PORT } = require("./config/serverConfig");
+const CityRepository = require("./repository/city-repository");
 
 const setupAndStartServer = async () => {
     const app = express();
@@ -8,6 +9,8 @@ const setupAndStartServer = async () => {
     app.use(express.urlencoded({ extended: true }));
 
     app.listen(PORT, () => {
+        const cityRepository = new CityRepository();
+        cityRepository.createCity({ name: "Ahmedabad" });
         console.log(`Server started at port no: ${PORT}`);
     });
 };
