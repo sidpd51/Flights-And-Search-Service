@@ -12,7 +12,6 @@ const create = async (req, res) => {
             err: {},
         });
     } catch (error) {
-        console.log(error);
         return res.status(500).json({
             data: {},
             success: false,
@@ -32,7 +31,6 @@ const update = async (req, res) => {
             err: {},
         });
     } catch (error) {
-        console.log(error);
         return res.status(500).json({
             data: {},
             success: false,
@@ -52,7 +50,6 @@ const get = async (req, res) => {
             err: {},
         });
     } catch (error) {
-        console.log(error);
         return res.status(500).json({
             data: {},
             success: false,
@@ -72,7 +69,6 @@ const destroy = async (req, res) => {
             err: {},
         });
     } catch (error) {
-        console.log(error);
         return res.status(500).json({
             data: {},
             success: false,

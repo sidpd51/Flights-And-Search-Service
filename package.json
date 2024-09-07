@@ -5,9 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "npx nodemon src/index",
-    "migrate": "npx sequelize db:migrate",
-    "migrate-undo": "npx sequelize db:migrate:undo"
+    "start": "npx nodemon src/index"
   },
   "author": "sidpd",
   "license": "ISC",
