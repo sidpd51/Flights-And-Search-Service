@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
          */
         static associate(models) {
             // define association here
-            this.belongsTo(models.cityId, {
-                foreignKey: cityId,
+            this.belongsTo(models.City, {
+                foreignKey: "cityId",
                 onDelete: "CASCADE",
             });
         }
@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
             },
             address: DataTypes.STRING,
             cityId: {
-                name: DataTypes.INTEGER,
+                type: DataTypes.INTEGER,
                 allowNull: false,
             },
         },
