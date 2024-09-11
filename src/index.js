@@ -3,7 +3,7 @@ const { PORT, SYNC_DB } = require("./config/serverConfig");
 const CityRepository = require("./repository/city-repository");
 const ApiRoutes = require("./routes/index");
 const db = require("./models/index");
-const { City, Airport } = require("./models/index");
+const { City, Airport, Flight } = require("./models/index");
 const sequelize = require("sequelize");
 
 const setupAndStartServer = async () => {
@@ -47,7 +47,8 @@ const setupAndStartServer = async () => {
 
         // const airport = await Airport.findByPk(8)
         // await city.addAirport(airport)
-       
+        // const flight = await Flight.create(data);
+        // console.log(flight)
     });
 };
 
